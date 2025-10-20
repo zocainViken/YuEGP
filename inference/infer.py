@@ -58,11 +58,12 @@ parser.add_argument("--profile", type=int, default=3)
 parser.add_argument("--verbose", type=int, default=1)
 parser.add_argument("--compile", action="store_true")
 parser.add_argument("--icl", action="store_true")
+parser.add_argument("--attention", type=str, default="sdpa", help='"sage2","sage","sdpa"')
 
 args = parser.parse_args()
 profile = args.profile
 compile = args.compile
-sdpa = args.sdpa
+sdpa = args.attention
 use_icl = args.icl
 
 if use_icl:
